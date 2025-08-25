@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "zoom-s2s-auth.js",
   "scripts": {
-    "start": "node zoom-recordings-manager.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",

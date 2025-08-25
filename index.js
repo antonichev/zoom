@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const { getAllRecordings, deleteRecording } = require('./zoom-recordings-manager');
 
@@ -12,6 +13,7 @@ app.get('/getRecordings', async (req, res) => {
 		const result = recordings.map(recording => ({
 			id: recording.id,
 			duration: recording.duration,
+			email: recording.host_email,
 			recordings: recording.recording_files.filter(file => file.file_type === 'MP4')
 		}));
 
